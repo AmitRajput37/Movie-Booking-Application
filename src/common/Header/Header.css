@@ -1,0 +1,38 @@
+.header{
+    background-color: #222;
+    height: 36px;
+    padding-top: 8px;
+    padding: 8px 8px 32px 16px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.App-logo{
+    background-color: #ff7f7f;
+    height: 35px;
+    
+}  
+
+@keyframes App-logo {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .App-logo {
+    -webkit-animation: App-logo 2s linear infinite;
+    -moz-animation: App-logo 2s linear infinite;
+    -ms-animation: App-logo 2s linear infinite;
+    -o-animation: App-logo 2s linear infinite;
+    animation: App-logo 2s linear infinite;
+  }
