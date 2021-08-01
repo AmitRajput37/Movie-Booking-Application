@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './common/Header/Header';
 import './index.css';
-// import {logo} from "./logo.svg";
+import Home from './screens/Home/Home';
 
 ReactDOM.render(
   <div>
-    <Header />
+    <Home />
+    
   </div>,
   document.getElementById('root')
 );
