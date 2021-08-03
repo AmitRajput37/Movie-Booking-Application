@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import Home from './screens/Home/Home';
+import Routes from './screens/Home/Routes';
 
 ReactDOM.render(
   <div>
-    <Home />
-    
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   </div>,
   document.getElementById('root')
 );

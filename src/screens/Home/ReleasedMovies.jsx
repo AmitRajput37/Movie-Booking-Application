@@ -3,9 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
 import moviesData from '../../common/moviesData';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,50 +14,37 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   imageList: {
-    width: 500,
+    width: 1300 ,
     height: 450,
+    display: 'flex',
+    justifyContent: 'space-around',
+    
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
 }));
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const itemData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 export function ReleasedMovies() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <ImageList rowHeight={180} className={classes.imageList}>
-        <ImageListItem key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">December</ListSubheader>
+      <ImageList rowHeight={350} cols={4} className={classes.imageList}>
+        <ImageListItem key="Subheader" cols={4} style={{ height: 'auto' }} className={classes.imageList}>
+          
         </ImageListItem>
         {moviesData.map((item) => (
-          <ImageListItem key={item.id}>
+          <ImageListItem key={item.id} className={classes.imageList} style={{cursor:'pointer'}}>
             <img src={item.poster_url} alt={item.title} />
             <ImageListItemBar
               title={item.title}
-              subtitle={<span>by: {item.release_date}</span>}
+              subtitle={<span>Released Date: {item.release_date}</span>}
             />
           </ImageListItem>
         ))}
       </ImageList>
     </div>
+    
   );
 }

@@ -5,11 +5,13 @@ import { Filters } from './Filters';
 import "./Home.css";
 import { ReleasedMovies } from './ReleasedMovies';
 import { UpcomingMovies } from './UpcomingMovies';
+import { Link } from "react-router-dom";
 
 
 export default class Home extends Component{
     render(){
         return(
+           
             <div>
                 <Header />
                 <span>
@@ -19,7 +21,9 @@ export default class Home extends Component{
                 
                 <div className="flex-container">
                     <div className="left">
+                    <Link to="/details">
                         <ReleasedMovies />
+                          </Link>
                     </div>
                     <div className="right">
                         <Filters />
@@ -27,6 +31,7 @@ export default class Home extends Component{
 
                 </div>
             </div>
+            
         );
     }
 }
