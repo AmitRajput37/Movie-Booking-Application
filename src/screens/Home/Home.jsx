@@ -1,5 +1,4 @@
 import Header from "../../common/Header/Header";
-import { Filters } from "./Form";
 import "./Home.css";
 import { UpcomingMovies } from "./UpcomingMovies";
 import { Link } from "react-router-dom";
